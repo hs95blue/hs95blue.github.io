@@ -1,20 +1,124 @@
 ---
 layout: post
-title:  "A Week With the Apple Watch"
+title:  "[코딩테스트연습] 양념 반 후라이드 반"
 tags: [ Tips ]
 featured_image_thumbnail:
 featured_image: assets/images/posts/2018/12.jpg
 ---
-The **Apple Watch** is a smartwatch developed by Apple Inc. It incorporates fitness tracking and health-oriented capabilities as well as integration with iOS and other Apple products and services. The device is available in four variants: Apple Watch Sport, Apple Watch, Apple Watch Hermès, and Apple Watch Edition. The Watch is distinguished by different combinations of cases and first or third party interchangeable bands. Apple Watch relies on a wirelessly connected iPhone to perform many of its default functions such as calling and texting. It is compatible with the iPhone 5 or later models running iOS 8.2 or later, through the use of Bluetooth or Wi-Fi.
 
-Announced by Tim Cook on September 9, 2014, the device was available for pre-order on April 10 and began shipping on April 24, 2015. The Apple Watch quickly became the best-selling wearable device, with the shipment of 4.2 million smartwatches in the second quarter of 2015, according to analyst firm Canalys.
 
->“You can only do so many things great, and you should cast aside everything else.” ― Tim Cook
 
-Rumors surrounded an Apple-developed wearable back as far as 2011, which conceptualized the device as a variation of the iPod that would curve around the user’s wrist, and feature Siri integration. On February 10, 2013, both The New York Times and The Wall Street Journal reported that Apple was beginning to develop an iOS-based smartwatch with a curved display. On February 12, 2013, Bloomberg reported that Apple’s smartwatch project was “beyond the experimentation phase in its development”, and had a team of at least 100 designers were working on the project. Further reports in March 2013 indicated that Apple planned to release the device by the end of the year. In July 2013, Financial Times reported that Apple had begun hiring more employees to work on the smartwatch, and that it was targeting a possible retail release in late 2014.
 
-## Unveiling & Release
 
-In April 2014, Apple CEO Tim Cook told The Wall Street Journal that the company was planning to launch new product categories that year, but did not reveal any specifics. In June 2014, Reuters reported that production was expected to begin in July for a release in October.
 
-Apple Watch was first unveiled after a classic and ever infamous “We do have ‘one more thing’…” slide, which heard enormous applause, on September 9, 2014 during a press event which also saw the introduction of the iPhone 6. After the reveal video, the auditorium erupted with applause while Tim Cook rolled back his sleeve, revealing an Apple Watch on his wrist. Speaking about the device, Apple CEO Tim Cook explained that Apple Watch was “a new, intimate way to communicate from your wrist, and a comprehensive health and fitness device.”
+# 양념반 후라이드반
+
+현진 치킨에서 판매하는 치킨은 양념 치킨, 후라이드 치킨, 반반 치킨으로 총 세 종류이다.  
+ 반반 치킨은 절반은 양념 치킨, 절반은 후라이드 치킨으로 이루어져있다.  
+양념 치킨 한 마리의 가격은 A원, 후라이드 치킨 한 마리의 가격은 B원, 반반 치킨 한 마리의 가격은 C원이다.
+
+상도는 오늘 파티를 위해 양념 치킨 최소 X마리, 후라이드 치킨 최소 Y마리를 구매하려고 한다.   
+반반 치킨을 두 마리 구입해 양념 치킨 하나와 후라이드 치킨 하나를 만드는 방법도 가능하다.   
+상도가 치킨을 구매하는 금액의 최솟값을 구해보자.  
+
+
+
+https://www.acmicpc.net/problem/16917
+
+## 풀이 
+  -우리는 후라이드, 양념치킨을 최소 X, Y마리 이상 사야한다.  
+    후라이드 한마리 + 양념 한마리 = 2 * 반반과 같다.  
+    가격으로 치면 A+B와 2C를 비교해 A+B가 더 싸면 반반치킨을 사지않고,  
+    아니면 반반치킨으로 사고 남는것을 더 사면된다.  
+
+
+## 의사코드
+
+  아래는 코드로 옮기기전에 생각을 정리한 의사코드이다.  
+  코드로 바꾸려면 더 다듬어야 한다. 
+  ```
+   //A+B > 2C이면
+      //적은쪽 치킨 갯수에 맞춰서 2C비용만큼 치킨을 산다.
+      //남는 치킨은 그 치킨의 가격과 2C비용을 비교해 싼쪽 가격으로 산다.
+   //A+B < 2C이면
+      //각 치킨 개수에 맞춰서 산다.
+  ```
+
+
+
+## 전체코드
+아래는 의사코드에 맞춰 알고리즘을 구현한 코드이다.  
+2C가격이 더 쌀때 많은쪽 치킨갯수를 맞추기 위해 2C를 쓸수도 있다는 것을 알아야한다.
+ex) 후라이드 10마리, 양념 치킨 8마리일 때 ->  
+ 2C값으로 각 8마리를 사고 더 사야하는 후라이드 2마리를 A비용이 아니라 2C가 더 싸면 2C비용으로 살 수도 있다. 
+
+```java
+import java.util.Scanner;
+
+/**
+ * 작성자 : 이현식
+ * 날짜 : 2021/06/08
+ * 기능 : 백준 코딩테스트 풀이
+ * 문제 : 백준 : 16917 - 양념 반 후라이드 반
+ */
+public class Main {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int A = sc.nextInt();
+		int B = sc.nextInt();
+		int C = sc.nextInt();
+		int X = sc.nextInt();
+		int Y = sc.nextInt();
+		int sum = 0;
+		
+		//다섯 정수를 입력받는다.
+		//A+B값보다 2c값이 싸면
+		if((A+B) > 2*C) {
+			//c부터산다.
+			//X < Y이면
+			//X개수만큼 2C비용을 쓴다.
+			//Y-X개 만큼 B비용을 쓴다
+			if(X < Y) {
+				sum = X*2*C;
+				//만약 (Y-X)*B값보다 (Y-X)*2*C값이 더싸면
+				if(B > 2*C) {
+					sum = sum + (Y-X)*2*C;
+				}else if(B < 2*C) {
+					
+					sum = sum + (Y-X)*B;
+				}else {
+					sum = sum + (Y-X)*2*C;
+				}
+			}else if(X > Y) {
+				sum = Y*2*C;
+				//만약 (Y-X)*A값보다 (Y-X)*2*C값이 더 비싸면
+				if(A > 2*C) {
+					sum = sum + (X-Y)*2*C;
+				}else if(A < 2*C) {
+					
+					sum = sum + (X-Y)*A;
+				}else {
+					sum = sum + (X-Y)*2*C;
+				}
+			}else {
+				sum = X*2*C;
+			}
+			//A+B값이 2c값보다 싸면
+		}else if((A+B) < 2*C) {
+			//X개수만금 A
+			//Y개수만큼 B비용을 쓴다
+			sum = X * A + Y * B;
+			//A+B값이 2c값과 같으면
+		}else {
+			//그냥 값대로 사
+			sum = X * A + Y * B;
+		}
+		System.out.println(sum);
+		
+	}
+}
+
+```

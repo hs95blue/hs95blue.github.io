@@ -1,0 +1,34 @@
+HYUNSIK LEE
+Bucheon,Korea | (+82)010 - 9398 - 7805 | hs95blue@gmail.com
+Technologies and Architectures
+Front End: JavaScript, JQuery, HTML, CSS, Bootstrap, Spring Framework
+Back End:  MySQL, Oracle, Postgres, JAVA
+Tools: GitHub, SVN
+
+Software Development Experience
+Full-Stack Software Developer | Asadal Co., Ltd.  2019.03 - 2021.02
+● Established a web full-stack system to manage public institution websites
+● Utilizing JavaScript, JQuery, HTML, CSS(Bootstrap), Spring Framework, Oracle Postgres JAVA, etc.
+● improving the overall quality of the site
+(link: https://www.sme-expo.go.kr/)
+(link: https://www.seoul.go.kr/)
+(link: https://www.gangnam.go.kr/)
+(link: http://www.moj.go.kr/)
+
+Notable Software Engineering Projects
+
+Full Stack Engineer | Online Kiosk
+
+● A back-end focused full-stack web application for restaurant waiting
+● Established a web full-stack system to manage restaurant waiting
+● The web application communicates with the restaurant's POS system(with kiosk) to determine the number of people waiting.
+● Built a system by using Oracle, Java
+● Built a responsive web application by using Bootstrap, Javascript
+
+Education
+ipp division 2019
+SW Work-learning parallel system Program
+The University Of Korea, Hongik, CA 2019
+Bachelor of Science - Software Convergence Engineering
+
+주제
