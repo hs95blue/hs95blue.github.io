@@ -8,9 +8,7 @@ featured: true
 hidden: true
 ---
 
-## 순열이란?  
-
-<br>
+### 순열이란?  
 
 > n개의 수 중에서 r개의 숫자를 모든 순서대로 뽑는 경우  
 
@@ -31,8 +29,7 @@ output :
 ```
 이렇게 6개가 된다.
 
-## 순열 알고리즘  
-
+### 순열 알고리즘  
 
 > 순열 알고리즘에는 2가지 방법이 있다.  
 
@@ -41,7 +38,7 @@ output :
    
 [^1]: 규칙이 있는 배열.
 
-## 1.Swap을 이용한 순열  
+### 1.Swap을 이용한 순열  
 
 첫번째는 swap 메소드를 만들어 배열들의 값을 직접 바꾸는 방법이다.  
 
@@ -56,7 +53,39 @@ depth보다 인덱스가 큰 값들만 가지고 다시 swap을 진행한다.
 > 간단하고 깔끔하지만 순서가 보장되지 않는다.  
 
 
-### Code
+### Pseudo Code
+```java
+//알고리즘이라고 어렵게 생각하지말고 직관적으로 어떻게 해왔는지 생각해보자
+		//input : [1, 2, 3]
+        //output :  각각 다른 순서의 숫자의 모든 경우 출력
+
+		//1이 맨앞에 오게한다 swap(0,0)
+			//2가 두번째 오게한다.3이 세번째 오게한다.swap(1,1)
+			//출력한다.
+			//3이 두번째 오게한다.2가 세번째 오게한다.swap(1,2)
+			//출력한다.
+		//2가 맨앞에 오게한다. swap(0,1)
+			//1이 두번째오게한다,3이 세번째오게한다. swap(1,1)
+		    //3이 두번째오게한다.1이 세번째 오게한다.swap(1,2)
+			//출력한다.
+		
+		//같은 패턴으로 3이 맨앞으로 오게한 후 수행한다.
+		
+		//로직정리
+		/* 
+		 * IF depth가 r이면  
+		 * 	출력한다.
+		 * 아니면 
+		 * Loop:
+		 * 	어떤 숫자를 depth자리에 오게한다. -> swap(a, b)
+		 * 	depth++ ,  1로 돌아간다.
+		 * 	제자리로 돌려놓는다.
+		 * END CODE
+		 * 		 
+		 */
+```
+
+### Java Code
 ```java
 /**
  * 순열 : n 개 중에서 r 개를 순서있게 뽑기
@@ -75,17 +104,7 @@ public class Permutation {
         permutation(arr, 0, n, 3);
     }
 
-    // 사전순으로 순열 구하기
-	/*
-	 * // 사용 예시: perm(arr, output, visited, 0, n, 3); static void perm(int[] arr,
-	 * int[] output, boolean[] visited, int depth, int n, int r) { if (depth == r) {
-	 * print(output, r); return; }
-	 * 
-	 * for (int i = 0; i < n; i++) { if (visited[i] != true) { visited[i] = true;
-	 * output[depth] = arr[i]; perm(arr, output, visited, depth + 1, n, r);
-	 * visited[i] = false; } } }
-	 */
-
+  
     // 순열 구하기
     // 사용 예시: permutation(arr, 0, n, 4);
     static void permutation(int[] arr, int depth, int n, int r) {
@@ -116,7 +135,7 @@ public class Permutation {
 }
 ```  
 
-### 알아볼 것  
+#### 궁금증   
 
 - DFS알고리즘?
 - 재귀함수

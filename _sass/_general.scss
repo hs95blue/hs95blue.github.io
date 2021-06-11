@@ -53,7 +53,30 @@ h2 {
   border-bottom: 1px solid lightgray;
   width: 60%;
 }
-
+.post-content h3 {
+  border-bottom: 1px solid lightgray;
+  width: 60%;
+  font-size: 1.33333rem;
+}
+.post-content h4 {
+  border-bottom: 1px solid lightgray;
+  width: 60%;
+  font-size: 1.11111rem;
+}
+/*
+.post-content h3 {
+  border-left: 5px solid #a1a1a1e8;
+  padding-left: 5px;
+  font-size: 1.55555rem;
+  background-color: #fafafa;
+}
+.post-content h4 {
+  border-left: 5px solid #a1a1a1e8;
+  padding-left: 5px;
+  font-size: 1.11111rem;
+  background-color: #fafafa;
+}
+*/
 h3 {
   font-size: 1.66667rem;
   margin: 1em 0 0.5em;
@@ -121,6 +144,7 @@ pre code {
 }
 
 blockquote {
+  //display: flexbox;
   color: $gray-darkest;
   font-family: $font-secondary;
   font-size: rem;
@@ -137,9 +161,11 @@ blockquote {
 blockquote:before {
   color: $color-accent;
   content: "\201C";
-  display: block;
-  font-size: 72px;
-  left: 50%;
+  //display: flex;
+  font-size: 3rem;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+  //left: 50%;
   line-height: 1;
   position: absolute;
   top: 0;
@@ -149,6 +175,7 @@ blockquote:before {
 */
 blockquote p {
   margin-bottom: 0.5em;
+  // margin-left: rem;
 }
 
 blockquote p:last-child {
