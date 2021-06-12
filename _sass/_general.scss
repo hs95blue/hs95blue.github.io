@@ -4,7 +4,7 @@
  */
 html {
   font-family: $font-primary;
-  font-size: 112.5%;
+  //font-size: 112.5%;
   height: 100%;
   min-height: 100%;
 }
@@ -56,12 +56,12 @@ h2 {
 .post-content h3 {
   border-bottom: 1px solid lightgray;
   width: 60%;
-  font-size: 1.33333rem;
+  font-size: 1.66666rem;
 }
 .post-content h4 {
   border-bottom: 1px solid lightgray;
   width: 60%;
-  font-size: 1.11111rem;
+  font-size: 1.33333rem;
 }
 /*
 .post-content h3 {
@@ -153,7 +153,7 @@ blockquote {
   // padding-top: 45px;
   position: relative;
   //text-align: center;
-  border-left: 5px solid #505cf1;
+  border-left: 4px solid #2e9fff;
   padding-left: 5px;
   background-color: #f7f7f7;
 }

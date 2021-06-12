@@ -92,10 +92,10 @@
   margin-top: 2.14285em;
 }
 
-.post-full .post-content > p:first-child:first-letter {
+.post-full .post-content > p:first-child:first-line {
   color: $gray-darkest;
   font-weight: 400;
-  font-size: 72px;
+  font-size: 2rem;
   font-family: $font-secondary;
   float: left;
   line-height: 0.8;
