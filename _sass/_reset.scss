@@ -8,6 +8,15 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+m {
+  background-color: #ffff11;
+}
+
+r {
+  color: rgb(236, 38, 38);
+  text-decoration: underline;
+}
+
 body {
   margin: 0;
 }
@@ -37,7 +46,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1em;
 }
 
@@ -80,6 +89,7 @@ abbr[title] {
 b,
 strong {
   font-weight: bold;
+  background-color: #8cffff;
 }
 
 dfn {
@@ -87,7 +97,9 @@ dfn {
 }
 
 small {
+  display: block;
   font-size: 80%;
+  text-align: center;
 }
 
 sub,
@@ -109,6 +121,8 @@ sup {
 img {
   border: 0;
   vertical-align: middle;
+  display: block;
+  margin: auto;
 }
 
 svg:not(:root) {
