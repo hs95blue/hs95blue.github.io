@@ -4,6 +4,7 @@ title: '[Network]How Browser works?'
 tags: [Browser, Computer Science, Network]
 featured_image_thumbnail:
 featured_image: assets/images/posts/2018/6.jpg
+featured: true
 ---
 
 ## 브라우저 동작원리

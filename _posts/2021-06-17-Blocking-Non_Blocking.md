@@ -4,6 +4,7 @@ title: '[Network]Blocking & Non Blocking I/O (feat.Sync, Async)'
 tags: [Startup, Tips, Network]
 featured_image_thumbnail: assets/images/posts/2018/4_thumbnail.jpg
 featured_image: assets/images/posts/2018/4.jpg
+featured: true
 ---
 
 ## Blocking & Non Blocking I/O

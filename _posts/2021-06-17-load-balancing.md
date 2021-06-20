@@ -4,6 +4,7 @@ title:  "[Network]로드밸런싱 Load Balancing"
 tags: [ Tips, Development, Network  ]
 featured_image_thumbnail:
 featured_image: assets/images/posts/2018/3.jpg
+featured: true
 ---
 
 ## 로드 밸런싱

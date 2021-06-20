@@ -5,7 +5,7 @@ tags: [알고리즘, permutation, 순열, Tips]
 featured_image_thumbnail:
 featured_image: assets/images/posts/2019/desk.jpg
 featured: true
-hidden: true
+# hidden: true
 ---
 
 ### 순열이란?  
